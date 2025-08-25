@@ -1,0 +1,23 @@
+{ % extends 'base.html' %}
+
+{% block title %}Take Quiz{% endblock title %}
+
+{% block content %}
+    <h2>{{ quiz.title }}</h2>
+    <form action="post">
+        {% csrf_token %}
+        {% for question in quiz.questions.all %}
+            <p>{{question.text}}</p>
+            {% for answer in question.answers.all %}
+                <label>
+                    <input type="radio" 
+                    name="{{ question.id }}" 
+                    value="{{ answer.id }}">
+                    {{ answer.text }}
+                </label><br>
+            {% endfor %}
+        {% endfor %}
+        <button type="submit">Submit</button>
+    </form>
+{% endblock %}    
+        
