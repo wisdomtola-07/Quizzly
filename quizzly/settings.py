@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-2k^8!k_szzm1j^^dw_v*#^&--zdb#1j3ho+mz4imjpt1_!3$tv
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["quizzly-v20q.onrender.com"]
 
 
 # Application definition
